@@ -4,7 +4,7 @@
   "description": "Sample application to demonstrate Octopus Deploy",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp -R ./src/static ./dist/static",
     "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
