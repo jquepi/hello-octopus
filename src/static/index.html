@@ -3,21 +3,12 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Continue your journey with Octopus Deploy</title>
+    <title>Deployment: Octopus Deploy</title>
     <meta name="description" content="Find out about Octopus Deploy and where to learn more." />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <meta name="robots" content="all" />
-    <meta name="author" content="Octopus Deploy" />
+    <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="High level overview of Octopus Deploy" />
-    <meta property="og:description" content="Learn how to create the build information file to push to Octopus Deploy." />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:site_name" content="Octopus Deploy" />
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="@OctopusDeploy" />
-    <meta name="application-name" content="Octopus Deploy" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="canonical" href="https://octopus.com/blog/constructing-build-information" />
     <link rel="me" type="text/html" href="https://twitter.com/OctopusDeploy" />
@@ -39,153 +30,96 @@
 
     <main style="background-image: url('IMAGES/ocean-bed.svg')" class="sea-bed-background">
         <div class="container">
-            <div class="row">
-                <div class="col blog-single__content-area container-padding" id="blog-content">
-                    <article class="paper">
-                        <header class="text-center py-4">
-                            <h1 class="text-white">
-                                Continue your journey with Octopus Deploy
-                            </h1>
-                            <h4 class="font-weight-normal text-white">
-                                We’ve curated these helpful posts for you.
-                            </h4>
-                        </header>
-
-                        <div class="row mb-3 mb-lg-5 align-items-stretch">
-                            <article class="col-sm-6 col-lg-4 my-3">
-                                <a href="https://octopus.com/blog/ten-pillars-of-pragmatic-deployments" class="blog-card">
-                                    <figure class="blog-card__image">
-                                        <img src="IMAGES/blogimage-the-ten-pillars-of-pragmatic-deployments-2021.png" alt="The ten pillars of pragmatic deployments" />
-                                    </figure>
-                                    <div class="py-3 px-4 blog-card__text">
-                                        <span class="badge badge-primary blog-card__topic">DevOps</span
-                      >
-                      <h3 class="m-0 color-text-normal blog-card__title">
-                        The ten pillars of pragmatic deployments
-                      </h3>
-                    </div>
-                    <div class="px-4 pb-4 blog__meta row">
-                      <div class="blog__meta__avatar col-auto pr-0">
-                        <img
-                          src="IMAGES/profile-matthewcasperson.png"
-                          class="profile-image profile-image--small m-0"
-                          alt="Matthew Casperson"
-                        />
-                      </div>
-                      <div class="blog__meta__text col">
-                        <p class="m-0 color-text-normal font-weight-medium">
-                          Mathew Casperson
-                        </p>
-                        <p class="m-0 color-text-muted font-weight-normal">
-                          February 22, 2021 • 18 mins
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </article>
-
-                <article class="col-sm-6 col-lg-4 my-3">
-                  <a
-                    href="https://octopus.com/blog/importing-deploying-your-first-octopus-project"
-                    class="blog-card"
-                  >
-                    <figure class="blog-card__image">
-                      <img
-                        src="IMAGES/blogimage-importingadeployabletutorialwithoctopusdeployandazurewebapplications-2021.webp"
-                        alt="Laptop with code on screen sits behind a rocket ship that is launching towards Azure logo above"
-                      />
-                    </figure>
-                    <div class="py-3 px-4 blog-card__text">
-                      <span class="badge badge-primary blog-card__topic"
-                        >DevOps</span
-                      >
-                      <h3 class="m-0 color-text-normal blog-card__title">
-                        Importing and deploying your first Octopus project
-                      </h3>
-                    </div>
-                    <div class="px-4 pb-4 blog__meta row">
-                      <div class="blog__meta__avatar col-auto pr-0">
-                        <img
-                          src="IMAGES/profile-terencewong.png"
-                          class="profile-image profile-image--small m-0"
-                          alt="Terence Wong"
-                        />
-                      </div>
-                      <div class="blog__meta__text col">
-                        <p class="m-0 color-text-normal font-weight-medium">
-                          Terence Wong
-                        </p>
-                        <p class="m-0 color-text-muted font-weight-normal">
-                          October 20, 2021 • 6 mins
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </article>
-
-                <article class="col-sm-6 col-lg-4 my-3">
-                  <a
-                    href="https://octopus.com/blog/common-deployment-patterns-and-how-to-set-them-up-in-octopus"
-                    class="blog-card"
-                  >
-                    <figure class="blog-card__image">
-                      <img
-                        src="IMAGES/blogimage-commondeploymentpatternsandhowtousetheminoctopus-2021.png"
-                        alt="Octopus logo surrounded by four blocks, representing deployments types of blue/green, canary, rolling/lighthouse, and multi-region."
-                      />
-                    </figure>
-                    <div class="py-3 px-4 blog-card__text">
-                      <span class="badge badge-primary blog-card__topic"
-                        >DevOps</span
-                      >
-                      <h3 class="m-0 color-text-normal blog-card__title">
-                        Common deployment patterns and how to use them in
-                        Octopus
-                      </h3>
-                    </div>
-                    <div class="px-4 pb-4 blog__meta row">
-                      <div class="blog__meta__avatar col-auto pr-0">
-                        <img
-                          src="IMAGES/profile-andycorrigan.png"
-                          class="profile-image profile-image--small m-0"
-                          alt="Andy Corrigan"
-                        />
-                      </div>
-                      <div class="blog__meta__text col">
-                        <p class="m-0 color-text-normal font-weight-medium">
-                          Andy Corrigan
-                        </p>
-                        <p class="m-0 color-text-muted font-weight-normal">
-                          November 8, 2021 • 10 mins
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </article>
+            <div class="row justify-content-center">
+              <div class="bg-white p-4 p-md-5 deployment-details">
+                <header class="deployment-details__project-info text-center mb-5">
+                  <div class="deployment-details__project-image mb-4">
+                    <img src="https://via.placeholder.com/300" alt="Project Image">
+                  </div>
+                  <h1 class="mb-3">Hello Octopus</h1>
+                  <p>This sample project demonstrates how an application can be deployed using Octopus Deploy.</p>
+                </header>
+                <div class="deployment-details__basic mb-4">
+                  <table class="deployment-details__table">
+                    <tbody>
+                      <tr>
+                        <th>Latest deployment</th>
+                        <td>6 seconds ago</td>
+                      </tr>
+                      <tr>
+                        <th>Environment</th>
+                        <td>Staging</td>
+                      </tr>
+                      <tr>
+                        <th>Release</th>
+                        <td>1.0.1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <input type="button" value="Show more" id="bt" onclick="toggle(this)" class="button-reset deployment-details__toggle-content">
+                <div id="cont" class="deployment-details__advanced">
+                  <table class="deployment-details__table mt-4 mb-4">
+                    <thead>
+                      <tr>
+                        <th>Packages</th>
+                        <th>Version</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>HelloOctopusWeb</th>
+                        <td>1.0.1</td>
+                      </tr>
+                      <tr>
+                        <th>HelloOctopusDatabase</th>
+                        <td>1.0.1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="deployment-details__table">
+                    <thead>
+                      <tr>
+                        <th>Variables</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Greeting</th>
+                        <td>Hello Octopus!</td>
+                      </tr>
+                      <tr>
+                        <th>Project.AWS.Account</th>
+                        <td>OctopusInstance</td>
+                      </tr>
+                      <tr>
+                        <th>Project.AWS.Bucket</th>
+                        <td>hellooctopus.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </article>
-          </div>
+            </div> 
         </div>
       </div>
      
     </main>
 </body>
 
-<footer class="bg-dark-cyan pb-4">
-  
-  <div class="container">
-    <span class="octopus-logo-white mb-4"></span>
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="text-white">Copyright © 2021 Octopus Deploy</p>
-                                            </div>
-                                            <div class="col-4 text-right">
-                                                <a href="mailto:customersuccess@octopus.com"><i class="fa fa-envelope fa-lg text-light pr-3"></i></a>
-                                                <a href="https://twitter.com/OctopusDeploy" title="Twitter"><i class="fa fa-twitter fa-lg text-light pr-3" title="Twitter"></i></a>
-                                                <a href="https://www.linkedin.com/company/octopus-deploy" title="LinkedIn"><i class="fa fa-linkedin fa-lg text-light" title="LinkedIn"></i>
-                              </div>
-                  </div>
-          </div>
-</footer>
+<script>
+  function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+            document.getElementById(ele.id).value = 'Show more';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Show less';
+        }
+    }
+</script>
 
 </html>

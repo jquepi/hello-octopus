@@ -76,6 +76,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body,
@@ -83,12 +84,7 @@ input,
 button,
 select,
 textarea,
-label,
-.tooltip,
-blockquote,
-.braintree-dropin,
-.braintree-heading,
-.popover {
+label {
     font-size: var(--octo-font-size-normal);
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: var(--octo-line-size-normal);
@@ -97,104 +93,23 @@ blockquote,
 }
 
 body {
-    position: relative;
-    background: var(--grey10);
-    padding-top: 66px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
 
 /* Page-level layout classes */
-
-body.narrow .container {
-    max-width: 600px;
-}
-
 main {
     background: #fff;
-    min-height: 900px;
-}
-
-h1.alpha,
-h1.beta {
-    position: relative;
-}
-
-h1.alpha:after,
-h1.beta:after {
-    position: absolute;
-    top: -30px;
-    right: 0;
-    z-index: 1;
-    transform: rotate(-25deg);
-    font-size: 40px;
-    color: #48B350;
-    background: #fff;
-    border: solid 4px #48B350;
-    padding: 5px;
-    border-radius: 5px;
-    zoom: 1;
-    filter: alpha(opacity=20);
-    opacity: 0.2;
-    -webkit-text-shadow: 0 0 2px #48B350;
-    text-shadow: 0 0 2px #48B350;
-    box-shadow: 0 0 2px #48B350;
+    flex: 1;
+    padding-bottom: 5rem;
 }
 
 .container {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
     position: relative;
 }
-
-.author {
-    display: block;
-    text-align: center;
-}
-
-.author .author-name {
-    color: #111;
-    display: block;
-}
-
-.profile-image {
-    width: 80px;
-    max-height: 80px;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-.profile-image--small {
-    width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-}
-
-.img-circle {
-    border-radius: 100%;
-}
-
-.img-rounded {
-    border-radius: 5px;
-}
-
-
-/* Use this to tag information that should be treated as PII and requires consent */
-
-body.highlight-personal .personal {
-    background: #9999ff;
-}
-
-.newsletter-signup-field {
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-@media (max-width: 991px) {
-    .newsletter-signup-field {
-        text-align: center;
-    }
-}
-
 
 /*-----------------------------------*/
 
@@ -219,7 +134,6 @@ body.highlight-personal .personal {
         transform: rotate(360deg);
     }
 }
-
 
 /*-----------------------------------*/
 
@@ -363,6 +277,8 @@ h4,
     color: var(--green) !important;
 }
 
+/*-----------------------------------*/
+
 .shadow-md {
     box-shadow: var(--octo-shadow-medium) !important;
 }
@@ -383,6 +299,8 @@ h4,
     z-index: 100;
     position: relative;
 }
+
+/*-----------------------------------*/
 
 .m-6,
 .my-6,
@@ -636,33 +554,14 @@ h4,
     width: auto !important;
 }
 
+/*-----------------------------------*/
+
 .secondary-link {
     color: var(--grey60) !important;
 }
 
 .secondary-link:hover {
     color: var(--grey90) !important;
-}
-
-.text-has-tooltip {
-    border-bottom: 1px dashed var(--grey50);
-    padding-bottom: 0.2rem;
-}
-
-.badge {
-    font-weight: normal!important;
-    border: 1px solid transparent;
-    border-radius: 2rem !important;
-    padding: var(--spacer-1) var(--spacer-2);
-}
-
-.badge.badge-primary,
-.badge.badge-info,
-.badge.badge-dark {
-    border-color: var(--cyan30);
-    background-color: var(--octo-color-primary);
-    background: var(--cyan10);
-    color: var(--cyan80);
 }
 
 .octopus-logo-white {
@@ -674,96 +573,15 @@ h4,
     background-repeat: no-repeat;
 }
 
-.blog-card {
-    background: white;
-    border-radius: var(--octo-rounded-small);
-    border: 1px solid var(--grey30);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    transition: 0.1s ease all !important;
-    top: 0;
-    box-shadow: none;
-}
-
-.blog-card:hover {
-    transition: --hover-transition;
-    top: -3px;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-}
-
-.blog-card__image {
-    background: #e9edf2;
-}
-
-.blog-card__topic {
-    position: absolute;
-    top: -26px;
-    left: 1.5rem;
-}
-
-.blog-card__title {
-    font-weight: 500;
-    line-height: 1.3;
-    font-size: 22px;
-}
-
-.blog-card__text {
-    position: relative;
-}
-
-.blog__meta {
-    margin-top: auto;
-}
-
-@media (min-width: 992px) {
-    .blog-card__image {
-        min-height: 183px;
-    }
-}
-
-.blog-single__header-stripe:before {
-    background-color: #e9edf2 !important;
-}
-
-.blog-single__header-image-wrapper {
-    background: #e9edf2;
-    padding: 3.5rem 0 2rem 0;
-    margin-top: -3rem;
-}
-
-@media (min-width: 992px) {
-    .blog-single__header-image-wrapper {
-        min-height: 408px;
-    }
-}
-
-.blog-single__header-image {
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.blog-single__content-area {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .sea-bed-background {
-    content: '';
     display: block;
-    /* position: absolute; */
-    bottom: 0;
     width: 100%;
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover, contain;
     background-color: var(--cyan70);
-    /* height: 800px; */
     left: 0;
     right: 0;
-    z-index: -2;
 }
 
 .clouds {
@@ -771,6 +589,7 @@ h4,
     display: block;
     width: 100%;
     height: 160px;
+    min-height: 160px;
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -793,6 +612,7 @@ h4,
     margin-top: 74px;
     width: 100%;
     height: 50px;
+    min-height: 50px;
     background-image: url("../IMAGES/wave.svg");
     background-repeat: repeat-x;
     animation: scrollX 6s linear infinite;
@@ -829,5 +649,111 @@ h4,
     }
 }
 
+/*-----------------------------------*/
 
-/*# sourceMappingURL=website.css.map*/
+.deployment-details {
+    border-radius: var(--octo-rounded-small);
+    max-width: 600px;
+    box-shadow: var(--octo-shadow-large);
+}
+
+.deployment-details__project-info p {
+    color: var(--octo-color-text-muted);
+}
+
+.deployment-details__project-image {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: var(--grey20);
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    color: var(--grey60);
+}
+
+.deployment-details__project-image img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.deployment-details__advanced {
+    display: none;
+}
+
+.deployment-details__table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.deployment-details__table thead th {
+    text-transform: uppercase;
+    color: var(--octo-color-text-muted);
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.08rem;
+}
+
+.deployment-details__table tr {
+    vertical-align: top;
+}
+
+.deployment-details__table th,
+.deployment-details__table td {
+    padding: 5px 20px;
+    padding-left: 0;
+}
+
+.deployment-details__table tbody td,
+.deployment-details__table td {
+    padding-right: 0;
+}
+
+.button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.button-reset::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.deployment-details__toggle-content {
+    cursor: pointer;
+    cursor: hand;
+    color: var(--octo-color-brand);
+    font-weight: 500;
+    transition: 0.2s all ease;
+}
+
+.deployment-details__toggle-content:hover {
+    color: var(--octo-color-text-normal);
+}
