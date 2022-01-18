@@ -111,6 +111,10 @@ main {
     position: relative;
 }
 
+.logo {
+    max-width: 175px;
+}
+
 /*-----------------------------------*/
 
 @-webkit-keyframes rotating {
