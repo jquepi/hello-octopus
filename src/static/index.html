@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -50,7 +50,7 @@
                   </table>
                 </div>
                 <input type="button" value="Show more" id="bt" onclick="toggle(this)" class="button-reset deployment-details__toggle-content">
-                <div id="cont" class="deployment-details__advanced">
+                <div id="toggleElement" class="deployment-details__advanced">
                   <table class="deployment-details__table mt-4 mb-4">
                     <thead>
                       <tr>
@@ -102,13 +102,13 @@
 
 <script>
   function toggle(ele) {
-        var cont = document.getElementById('cont');
-        if (cont.style.display == 'block') {
-            cont.style.display = 'none';
+        var toggleElement = document.getElementById('toggleElement');
+        if (toggleElement.style.display == 'block') {
+            toggleElement.style.display = 'none';
             document.getElementById(ele.id).value = 'Show more';
         }
         else {
-            cont.style.display = 'block';
+            toggleElement.style.display = 'block';
             document.getElementById(ele.id).value = 'Show less';
         }
     }
